@@ -31,8 +31,9 @@ public class SolicitacaoController {
 	public ResponseEntity<Solicitacao> adicionarSolicitacao(@RequestBody Solicitacao nova){
 		try {
 			for(Item it : nova.getItensSolicitacao()) {
-				it.setSolicitaco(nova);
+				it.setSolicitacao(nova);
 			}
+			System.out.println(nova);
 			sDAO.save(nova);
 			return ResponseEntity.ok(nova);
 		}
@@ -42,7 +43,7 @@ public class SolicitacaoController {
 	}
 	@GetMapping("/{solicitante}")
 	public ArrayList<Solicitacao> buscarPeloSolicitante(@PathVariable int solicitante){
-		System.out.println("CODIGO DO SOLICITANTE: " +solicitante);
+		//System.out.println("CODIGO DO SOLICITANTE: " +solicitante);
 		ArrayList<Solicitacao> solicit;
 		solicit = (ArrayList<Solicitacao>)sDAO.findBySolicitante(solicitante);
 		return solicit;

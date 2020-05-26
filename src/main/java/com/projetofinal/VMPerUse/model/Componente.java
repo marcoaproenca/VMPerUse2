@@ -14,10 +14,14 @@ public class Componente {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
 	private int id;
-	@Column(name = "nome", length = 50)
+	@Column(name = "tipo", length = 20)
+	private String tipo;
+	@Column(name = "nome", length = 100)
 	private String Nome;
-	@Column(name = "preco")
-	private Float preco;
+	@Column(name = "fornecedor", length = 100)
+	private String fornecedor;
+	@Column(name = "custo")
+	private Float custo;
 	
 	public int getId() {
 		return id;
@@ -25,16 +29,29 @@ public class Componente {
 	public void setId(int id) {
 		this.id = id;
 	}
+	public String getTipo() {
+		return tipo;
+	}
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
+	}
 	public String getNome() {
 		return Nome;
 	}
 	public void setNome(String nome) {
 		Nome = nome;
 	}
-	public Float getPreco() {
-		return preco;
+	public String getFornecedor() {
+		return fornecedor;
 	}
-	public void setPreco(Float preco) {
-		this.preco = preco;
+	public void setFornecedor(String fornecedor) {
+		this.fornecedor = fornecedor;
 	}
+	public Float getCusto() {
+		return custo;
+	}
+	public void setCusto(Float custo) {
+		this.custo = custo;
+	}
+	
 }

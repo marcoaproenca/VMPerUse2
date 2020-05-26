@@ -26,14 +26,14 @@ INSERT INTO `vmperuse`.`tbl_usuario`
 VALUES
 (null,
 'test004',
-'test004@itau-unibanco.com.br',
+'test004@teste.com',
 '001112224',
 '1234',
 'teste004 da silva',
 'Operação Mainframe',
 'Operador');
 use vmperuse;
-desc tbl_software;
+desc tbl_usuario;
 INSERT INTO `vmperuse`.`tbl_solicitacoes`
 (`num_solcitacao`,
 `data`,
@@ -43,31 +43,44 @@ VALUES
 (null,
 '2020-05-18',
 'solicitação 3',
-1);
-select * from tbl_software;
+2);
+select * from tbl_usuario;
+select * from tbl_solicitacoes;
+desc tbl_solicitacao;
+desc tbl_item;
 UPDATE `vmperuse`.`tbl_usuario`
 SET
-`departamento` = 'Operação Mainframe',
-`linkfoto` ='tbl_solicitacaofuncionario1.png'
+`departamento` = null,
+`linkfoto` ='//imagens/foto'
 WHERE `id` = 1;
-select * from tbl_usuario;
-select * from tbl_software;
-select * from tbl_item;
-select * from tbl_solicitacao where solicitante_id=1;
-desc tbl_item;
-desc tbl_software;
-desc tbl_componente;
-desc tbl_usuario;
-desc tbl_solicitacao;
-
-
-INSERT INTO `vmperuse`.`tbl_software`
+SELECT * FROM TBL_SOLICITACAO WHERE SOLICITANTE_ID = 2;
+SELECT * FROM TBL_SOFTWARE;
+INSERT INTO `vmperuse`.`tbl_componente` (`id`,`tipo`,`nome`,`fornecedor`,`custo`) VALUES (null,'software','PostgreSQL','PostgreSQL',0.00);
+INSERT INTO `vmperuse`.`tbl_componente` (`id`,`tipo`,`nome`,`fornecedor`,`custo`) VALUES (null,'software','MySQL','Oracle',0.00);
+INSERT INTO `vmperuse`.`tbl_componente` (`id`,`tipo`,`nome`,`fornecedor`,`custo`) VALUES (null,'software','SQL Server','Microsoft',0.15);
+INSERT INTO `vmperuse`.`tbl_componente` (`id`,`tipo`,`nome`,`fornecedor`,`custo`) VALUES (null,'software','Windows Server','Microsoft',0.20);
+INSERT INTO `vmperuse`.`tbl_componente` (`id`,`tipo`,`nome`,`fornecedor`,`custo`) VALUES (null,'software','Ubuntu Server','Canonical',0.00);
+INSERT INTO `vmperuse`.`tbl_componente` (`id`,`tipo`,`nome`,`fornecedor`,`custo`) VALUES (null,'hardware','processador','IBM',0.05);
+INSERT INTO `vmperuse`.`tbl_componente` (`id`,`tipo`,`nome`,`fornecedor`,`custo`) VALUES (null,'hardware','memoria','outras',0.02);
+INSERT INTO `vmperuse`.`tbl_componente` (`id`,`tipo`,`nome`,`fornecedor`,`custo`) VALUES (null,'hardware','armazenamento','outras',0.03);
+INSERT INTO `vmperuse`.`tbl_componente` (`id`,`tipo`,`nome`,`fornecedor`,`custo`) VALUES (null,'hardware','rede','outras',0.02);
+INSERT INTO `vmperuse`.`tbl_usuario`
 (`id`,
+`cargo`,
+`departamento`,
+`email`,
+`funcional`,
+`linkfoto`,
 `nome`,
-`fornecedor`,
-`preco`)
+`racf`,
+`senha`)
 VALUES
 (null,
-'Fedora Comunit',
-'Microsof',
-150.00);
+'Analista de Produção',
+'Operação',
+'test002@teste.com.br',
+'001112222',
+'funcionario2.png',
+'Teste02 da Silva',
+'test002',
+'1234');

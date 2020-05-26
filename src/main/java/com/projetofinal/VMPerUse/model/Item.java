@@ -16,8 +16,6 @@ public class Item {
 	@Column(name = "numItem")
 	private int numItem;
 	@ManyToOne
-	private Software software;
-	@ManyToOne
 	private Componente componente;
 	@ManyToOne
 	private Solicitacao solicitacao;
@@ -29,25 +27,18 @@ public class Item {
 	public void setNumItem(int numItem) {
 		this.numItem = numItem;
 	}
-	public Software getSoftware() {
-		return software;
-	}
-	public void setSoftware(Software software) {
-		this.software = software;
-	}
-		
-	public Componente getComponente() {
+	public Componente getcomponente() {
 		return componente;
 	}
-	public void setComponente(Componente componente) {
+	public void setcomponente(Componente componente) {
 		this.componente = componente;
 	}
+		
 	public Solicitacao getSolicitacao() {
 		return solicitacao;
 	}
-	public void setSolicitaco(Solicitacao solicitacao) {
+	public void setSolicitacao(Solicitacao solicitacao) {
 		this.solicitacao = solicitacao;
 	}
-	
 }
 	

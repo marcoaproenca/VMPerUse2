@@ -22,7 +22,7 @@ public class ComponenteController {
 		super();
 		this.cpDAO = cpDAO;
 	}
-	
+
 	@GetMapping("/")
 	public ResponseEntity< ArrayList<Componente> > BuscarTodos(){
 		ArrayList<Componente> lista = (ArrayList<Componente>)cpDAO.findAll();
