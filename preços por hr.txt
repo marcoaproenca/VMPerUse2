@@ -1,0 +1,15 @@
+Sistema Operacional: Linux, Windows.
+Banco de dados: 
+
+
+
+Custos/hr:
+
+Processador      - R$ 0,05
+Memória          - R$ 0,02
+Armazenamento    - R$ 0,03
+Largura de Banda - R$ 0,02 
+
+Total            - R$ 0,12
+
+

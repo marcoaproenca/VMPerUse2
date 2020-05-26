@@ -1,0 +1,17 @@
+A fazer:
+- Tenho que colocar "VM Per Use" como titulo de todas as paginas.
+
+Detalhes de hardware:
+
+- Quantidade de Processadores
+- Quantidade de Memória RAM
+- Quantidade de HD
+- Quantidade de liberação de tráfego (em Gbits)
+
+A partir da solicitação da máquina em função destas configurações, um custo de máquina por
+hora é definido. A partir daí o usuário também solicita licenças de software (que podem ser
+gratuitas ou possuir custos - também por horas). Ao final, este ticket deve ser gerado e
+armazenado em um banco de dados.
+
+- Tela 2: Perfil. Nesta tela, a partir da conexão do Usuário com o sistema, seus detalhes serão
+  exibidos (tais como nome completo, setor, foto, número de crachá, RACF, etc).
