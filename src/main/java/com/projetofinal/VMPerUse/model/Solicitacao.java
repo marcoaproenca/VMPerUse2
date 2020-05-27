@@ -33,6 +33,8 @@ public class Solicitacao {
 	
 	@Column(name = "observacoes", length = 200)
 	private String observacoes;
+	@Column(name = "valor")
+	private float valor;
 
 	@ManyToOne
 	@JsonIgnoreProperties("pedidos")
@@ -71,6 +73,12 @@ public class Solicitacao {
 	}
 	public void setObservacoes(String observacoes) {
 		this.observacoes = observacoes;
+	}
+	public float getValor() {
+		return valor;
+	}
+	public void setValor(float valor) {
+		this.valor = valor;
 	}
 	
 	

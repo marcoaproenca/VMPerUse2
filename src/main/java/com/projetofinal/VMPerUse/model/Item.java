@@ -15,6 +15,8 @@ public class Item {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "numItem")
 	private int numItem;
+	@Column(name = "quantidade")
+	private int quantidade;
 	@ManyToOne
 	private Componente componente;
 	@ManyToOne
@@ -26,6 +28,12 @@ public class Item {
 	}
 	public void setNumItem(int numItem) {
 		this.numItem = numItem;
+	}
+	public int getQuantidade() {
+		return quantidade;
+	}
+	public void setQuantidade(int quantidade) {
+		this.quantidade = quantidade;
 	}
 	public Componente getcomponente() {
 		return componente;
@@ -40,5 +48,6 @@ public class Item {
 	public void setSolicitacao(Solicitacao solicitacao) {
 		this.solicitacao = solicitacao;
 	}
+	
 }
 	
