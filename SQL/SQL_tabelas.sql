@@ -1,4 +1,4 @@
-create database vmperuse;
+tbl_softwarecreate database vmperuse;
 CREATE TABLE IF NOT EXISTS `vmPerUse`.`tbl_usuario` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `racf` VARCHAR(6) NOT NULL COMMENT 'Será uma das chaves de acesso ao sistema.',
@@ -45,7 +45,8 @@ VALUES
 'solicitação 3',
 2);
 select * from tbl_usuario;
-select * from tbl_solicitacoes;
+select * from tbl_solicitacao;
+select * from tbl_item;
 desc tbl_solicitacao;
 desc tbl_item;
 UPDATE `vmperuse`.`tbl_usuario`

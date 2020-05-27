@@ -30,11 +30,12 @@ public class Solicitacao {
 	@Temporal(TemporalType.DATE)
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy")
 	private Date data;
-	
 	@Column(name = "observacoes", length = 200)
 	private String observacoes;
 	@Column(name = "valor")
 	private float valor;
+	@Column(name = "status", length = 50)
+	private String status;
 
 	@ManyToOne
 	@JsonIgnoreProperties("pedidos")
@@ -80,7 +81,10 @@ public class Solicitacao {
 	public void setValor(float valor) {
 		this.valor = valor;
 	}
-	
-	
-
+	public String getStatus() {
+		return status;
+	}
+	public void setStatus(String status) {
+		this.status = status;
+	}
 }

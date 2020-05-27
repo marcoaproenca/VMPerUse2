@@ -36,6 +36,8 @@ public class Usuario {
 	private String departamento;
 	@Column(name = "linkfoto")
 	private String linkfoto;
+	@Column(name = "telefone", length = 50)
+	private String telefone;
 	
 
 	@OneToMany(mappedBy = "solicitante", cascade = CascadeType.ALL)
@@ -101,5 +103,11 @@ public class Usuario {
 	}
 	public void setLinkfoto(String linkfoto) {
 		this.linkfoto = linkfoto;
+	}
+	public String getTelefone() {
+		return telefone;
+	}
+	public void setTelefone(String telefone) {
+		this.telefone = telefone;
 	}
 }

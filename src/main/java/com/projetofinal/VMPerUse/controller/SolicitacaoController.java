@@ -33,7 +33,7 @@ public class SolicitacaoController {
 			for(Item it : nova.getItensSolicitacao()) {
 				it.setSolicitacao(nova);
 			}
-			//sDAO.save(nova);
+			sDAO.save(nova);
 			return ResponseEntity.ok(nova);
 		}
 		catch(Exception ex) {
