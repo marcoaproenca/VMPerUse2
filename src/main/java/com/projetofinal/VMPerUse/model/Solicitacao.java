@@ -1,5 +1,6 @@
 package com.projetofinal.VMPerUse.model;
 
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
@@ -27,9 +28,9 @@ public class Solicitacao {
 	private int numSolicitacao;
 	
 	@Column(name = "data")
-	@Temporal(TemporalType.DATE)
+	//@Temporal(TemporalType.DATE)
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy")
-	private Date data;
+	private LocalDate data;
 	@Column(name = "observacoes", length = 200)
 	private String observacoes;
 	@Column(name = "valor")
@@ -63,10 +64,10 @@ public class Solicitacao {
 	public void setNumSolicitacao(int numSolicitacao) {
 		this.numSolicitacao = numSolicitacao;
 	}
-	public Date getData() {
+	public LocalDate getData() {
 		return data;
 	}
-	public void setData(Date data) {
+	public void setData(LocalDate data) {
 		this.data = data;
 	}
 	public String getObservacoes() {
